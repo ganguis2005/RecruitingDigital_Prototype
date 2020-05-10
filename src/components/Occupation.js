@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
 import SimpleSel from './shared/SimpleSel';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
@@ -18,10 +17,13 @@ class Occupation extends React.Component {
         {name: 'Biologie', value: 'Biologie'},
       ],
     };
+    this.handleClick = this.handleClick.bind(this);
   }
-  
+  handleClick() {
+    this.props.forwardStep();
+    this.props.addUser();
+  }
   render () {
-    let schuler;
     return(
       <div className="app">
         <header className="app__header">
@@ -41,7 +43,7 @@ class Occupation extends React.Component {
               <SimpleSel label="Fachbereich" options={this.state.options} setFach={this.props.setFach}/>
               <CustomButtom cStyle={{width: '200px', maxHeight: '40px', minHeight: '40px', marginTop:'10px',textTransform: 'none'}} 
                             title="Weiter" 
-                            forwardStep={this.props.forwardStep}
+                            forwardStep={this.handleClick}
               />
               
           </div>

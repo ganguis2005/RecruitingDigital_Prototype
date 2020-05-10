@@ -35,7 +35,7 @@ class AlignItemsList extends React.Component{
           return(  
             <div style={{width:'100px'}}>  
               
-              <Button onClick={this.props.chooseAP} Style={{width: '200px', maxHeight: '40px', minHeight: '40px', marginTop:'0px',textTransform: 'none'}} >  
+              <Button id={partner.id} onClick={this.props.chooseAP} Style={{width: '200px', maxHeight: '40px', minHeight: '40px', marginTop:'0px',textTransform: 'none'}} >  
                 <ListItem alignItems="flex-start">
                   <ListItemAvatar>
                     <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
@@ -73,7 +73,7 @@ class AlignItemsList extends React.Component{
             display: 'inline',
           },
         }
-        const aPartner = 'Maxi'
+       
         return (
           <List className={classes.root}>
             { this.props.text.map((partner) => {

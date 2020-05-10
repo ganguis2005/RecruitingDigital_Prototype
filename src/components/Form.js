@@ -10,6 +10,8 @@ export default class Form extends Component {
             this.props.setVorname(e.target.value);
         } else if (e.target.id === 'nachname') {
             this.props.setNachname(e.target.value);
+        } else if (e.target.id === 'eMail') {
+            this.props.setEmail(e.target.value);
         }
         
     };
@@ -19,7 +21,7 @@ export default class Form extends Component {
         return (
             <div className="app">
                 <header className="app__header">
-                    <div class="app__logo app__logo--small"></div>
+                    <div className="app__logo app__logo--small"></div>
                 </header>
                 <div className="app__content">
                     <form>
@@ -27,12 +29,12 @@ export default class Form extends Component {
                         <br />
                         <TextField id="nachname" label="Nachname" required={true} onChange={this.change}/>
                         <br />
-                        
+                        <TextField id="eMail" label="E-mail" required={true} onChange={this.change}/>
                         <CustomButtom title="Weiter" forwardStep={this.props.forwardStep} />   
                     </form>
                 </div>
                 <div className="app__actions">
-                    <BackButton class="back-btn"  prevStep={this.props.prevStep}/>
+                    <BackButton className="back-btn"  prevStep={this.props.prevStep}/>
                 </div>
             </div>    
         )

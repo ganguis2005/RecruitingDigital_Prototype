@@ -11,7 +11,7 @@ export default class Datenschutz extends Component {
     }
     handleCheck() {
         let newChecked;
-        if(this.state.checked == false) {
+        if(this.state.checked === false) {
             newChecked = true;
         } else {
             newChecked = false
@@ -30,7 +30,7 @@ export default class Datenschutz extends Component {
         return (
             <div className="app">
             <header className="app__header">
-                <div class="app__logo app__logo--small"></div>
+                <div className="app__logo app__logo--small"></div>
             </header>
             <div className="app__content">
                     <a href='https://www.muellermilch.de/datenschutz/'>
